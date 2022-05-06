@@ -30,6 +30,10 @@ const routes: Routes = [
     path: '',
     redirectTo: '/tabs/tab1',
     pathMatch: 'full'
+  },
+  {
+    path: 'tabs/single-item',
+    loadChildren: () => import('./single-item/single-item.module').then( m => m.SingleItemPageModule)
   }
 ];
 
